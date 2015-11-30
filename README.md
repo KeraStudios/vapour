@@ -210,12 +210,12 @@ Vapour utilizes .Net's context handler(TODO: insert reference) to retrieve reque
 They are all accessible in the main app.vb and controller pages through the api object.
 
 The main types of variables are:
- - URL
+ - Params
 	Variables returned from the URL template.
 	Usage:
 	```
 	' For the url template: '/orders/:orderId/'
-	api.url("orderId")
+	api.params("orderId")
 	```
 	
 	For more information on URL variables refer to the URL template section.
