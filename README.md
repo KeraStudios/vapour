@@ -11,7 +11,7 @@
 	- Models
 	- Request Variables (WIP)
 	- General Functions
-	
+
 - Advanced Usage
 	- Error Handling
 	- Logging
@@ -83,10 +83,10 @@ Next we'll need to create the 'web.config' file in the root of your app with the
 	</system.webServer>
 </configuration>
 ````
-Note: if you already have a 'web.config' file you can just merge the handler tags into the web.config file.
+Note: if you already have a 'web.config' file you can just merge the handler tags into your web.config file.
 
 Next we'll also create two folders in the 'app_code/' directory called 'controllers/' and 'models/'
-respectively. You're folder structure should now look like this:
+respectively. Your folder structure should now look like this:
 ```
 app_code/
 	app.vb
@@ -119,7 +119,7 @@ app.route("GET", "/hello-world/", AddressOf controller.helloWorld)
 
 When a request comes in for a 'GET' method and for the url '/hello-world/' then 'controller.helloWorld()' will be executed.
 
-Advanced Note: in this example we are using a delegate to overcome a VB restraint which makes it difficult to pass functions around like objects.
+Advanced Note: in this example we are using a delegate to overcome a VB restraint which makes it difficult to pass subroutines around like objects.
 
 Our main page should now look like this.
 
@@ -288,7 +288,7 @@ Throw new http500("Something went wrong here")
 Errors.add(new http500("Something went wrong but will continue the code."))
 ```
 
-Errors come in several different flavours
+Errors come in several different flavours:
 	http400 - Client error
 	http404 - Something wasn't found
 	http500 - Server side error
