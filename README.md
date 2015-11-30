@@ -77,7 +77,7 @@ Next we'll need to create the 'web.config' file in the root of your app with the
 <configuration>
 	<system.webServer>
 		<handlers>
-			<-- Note: MyApp is a reference to the class 'NyApp' that was created in the 'app.vb' file. -->
+			<!-- Note: MyApp is a reference to the class 'NyApp' that was created in the 'app.vb' file. -->
 			<add verb="*" path="*" name="MyApp" type="MyApp"/>
 		</handlers>
 	</system.webServer>
@@ -131,7 +131,7 @@ Public Class MyApp
 	
 	Overrides Public Sub start()
 		
-		app.route("GET", "/hello-world/", AddressOf controllers.helloWorld)
+		route("GET", "/hello-world/", AddressOf controllers.helloWorld)
 		
 	End Sub
 	
