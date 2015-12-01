@@ -1,6 +1,6 @@
-#Vapour API
+# Vapour API
 
-##Table of Contents
+## Table of Contents
 - Introduction
 - Installation
 - Quick Start
@@ -24,7 +24,7 @@
 - License
 
 
-##Introduction
+## Introduction
 Vapour is a VB.NET API built for being as simple and modular as possible without compromising on RESTful API standards. Vapour runs within the existing VB.NET framework for the easiest setup possible.
 
 Features:
@@ -36,7 +36,7 @@ Features:
 - Works well with other .NET modules/add ins
 
 
-##Installation (WIP)
+## Installation (WIP)
 
 First, create the directory ‘app_code/‘ inside the root of your web app if it isn't there to begin with.
 This is the folder where most, or all, of our code will reside. To find out why go to the FAQ section below.
@@ -52,10 +52,10 @@ app_code/
 
 NOTE: This is a work in progress so the method of installing/setting up the framework is subject to change.
 
-##Quick Start
+## Quick Start
 
 
-###Creating Initial App
+### Creating Initial App
 
 To create your first vapour app first create the file 'app.vb' inside the 'app_code/' directory with the following code:
 ```
@@ -99,7 +99,7 @@ web.config
 
 
 
-###Routes
+### Routes
 
 Routing takes a clients request and filters it down to the correct controller. This is done by matching the request's
 method and url to the route's method and url template. When the request matches a route it's associated controller
@@ -139,12 +139,12 @@ End Class
 ```
 
 
-###URL Template (WIP)
+### URL Template (WIP)
 
 (TODO)
 
 
-###Controllers
+### Controllers
 
 When a route match is found the associated controller will be executed. To build controllers we create a new file in
 '/app_code/controllers/'. In our example we will make a file called 'helloWorld.vb' with the following:
@@ -164,7 +164,7 @@ End Class
 ```
 
 
-###Models
+### Models
 
 To continue our prior example, we will create the file 'mymodel.vb' and put it under the
 'app_code/models/' directory. Now we want to add the following:
@@ -205,7 +205,7 @@ End Class
 ```
 
 
-###Request Variables
+### Request Variables
 Vapour utilizes .Net's context handler(TODO: insert reference) to retrieve request variables.
 They are all accessible in the main app.vb and controller pages through the api object.
 
@@ -238,12 +238,12 @@ The main types of variables are:
 
 
 
-###General Functions
+### General Functions
 
 Inside Vapour there are some general functions that make life easier all round. Here is the list of functions and
 their purposes.
 
-####isNothing:
+#### isNothing:
 Often we run across variables that have no value or are DB Null which normally requires a larger conditional
 statement to account for the differences. So instead we have created isNothing function that simple returns true
 is the variable is nothing or is dbnull.
@@ -253,7 +253,7 @@ isNothing("test")
 ' Returns false.
 ```
 
-####isSomething:
+#### isSomething:
 The opposite of isNothing just avoids the awkward "Not isNothing()" in the code. Returns true if variable has an
 actual meaningful value.
 
@@ -262,14 +262,14 @@ isSomething("test")
 ' Returns true.
 ```
 
-####isGuid:
+#### isGuid:
 (TODO)
 
 
-##Advanced Usage
+## Advanced Usage
 
 
-###Error Handling
+### Error Handling
 
 Code will break, that's just a fact, users will enter bad data or something happens unexpectedly, and without a
 meaningful way to dealing with those errors things will go disastrously wrong. With that in mind Vapour has a build-in
@@ -296,7 +296,7 @@ Errors come in several different flavours:
 Note: error's should follow the http error standards for what kind of error is raised.
 
 
-###Logging
+### Logging
 Often, we developers want a way to record errors and requests. Vapour has a overridable logging subroutine that
 allows developers to manage logging in their own fashion.
 
@@ -319,7 +319,7 @@ The clientResponse object is the object that will be sent to the client. This al
 log requests based on the information going out, or alternatively, the api object can be used.
 
 
-###Best Practices
+### Best Practices
 
 (WIP)
 
@@ -328,7 +328,7 @@ model and the request. Instead the controllers should handle transposing the HTT
 This is also why there is no native access of HTTP variables in Vapour models.
 
 
-###HTTP Handler Cores
+### HTTP Handler Cores
 
 Vapour has two modes built in to handle HTTP requests:
 1) Synchronous
@@ -358,34 +358,35 @@ Public Class MyApp
 End Class
 ```
 
-##ToDos
+## ToDos
 We have a various todo/wishful items that we plan on implementing.
 Here is the list:
 - Make more flexibility for the user to decide base API structure
 - Remove need for the 'app_code/' directory.
 
 
-##FAQ
+## FAQ
 
 Q: Why is all, most, of the code contained inside the 'app_code/' directory?
+
 A: Microsoft .NET has been create in such a way that the common uncompiled code pages cannot be
 stored anywhere else except under their defined 'app_code/' directory.
 (TODO: Add website reference for source.)
 
 
 
-##Contribute
+## Contribute
 
 - Source Code: github.com/KeraStudios/vapour/
 - Issue Tracker: github.com/KeraStudios/vapour/issues
 
 
-##Support
+## Support
 
 If you are having issues, please let us know: thomas@kerastudios.com
 
 
-##License
+## License
 
 The project is licensed under the MIT license:
 
