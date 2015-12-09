@@ -1,6 +1,6 @@
 NameSpace Vapour_v1
 	
-	Public Class general
+	Public Partial Class general
 		
 		
 		'''''''''''''''''''''''''

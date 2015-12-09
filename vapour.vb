@@ -175,7 +175,7 @@ NameSpace Vapour_v1
 		' Note:
 		'		Default OPTIONS route used for passing back header information.
 		Dim routes as New list(of routeDict) _
-			({new routeDict("OPTIONS", "", nothing)})
+			({new routeDict("OPTIONS", "*", nothing)})
 		
 		
 		' NOTE: This is a special class to allow the controller/Lambda
